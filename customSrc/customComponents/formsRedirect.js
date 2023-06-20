@@ -13,6 +13,11 @@ const FormsRedirect = (props) => {
     Linking.openURL(formUrl);
   }
 
+  const handlePress = () => {
+    const url = "https://plataforma.naturalstationhn.com/citas/";
+    Linking.openURL(url).then(r => console.log("Error opening website"));
+  }
+
   return <View style={{padding: 20, backgroundColor: "black", borderRadius: 5}}>
     <Button
         title="Ingresar Historia Clínica Nutricional"
@@ -22,6 +27,11 @@ const FormsRedirect = (props) => {
     <Button
         title="Ingresar Medidas de Composición Corporal"
         onPress={openForm2}
+    />
+
+    <Button
+        title="Agendar cita"
+        onPress={handlePress}
     />
   </View>
 }

@@ -1,6 +1,5 @@
 import React from "react";
-import {Text, TouchableOpacity, View} from "react-native";
-import AmeliaCalendarRedirect from "./customSrc/customComponents/ameliaCalendarRedirect";
+import formsRedirect from "./customSrc/customComponents/formsRedirect";
 
 export const applyCustomCode = (externalCodeSetup) => {
 
@@ -12,8 +11,7 @@ export const applyCustomCode = (externalCodeSetup) => {
         screens: [
           {
             item: {
-              component: () => AmeliaCalendarRedirect(),
-              component: () => FormsRedirect()
+              component: () => formsRedirect()
             }
           }
         ]
