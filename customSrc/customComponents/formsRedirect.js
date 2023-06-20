@@ -1,4 +1,4 @@
-import {Button, Linking, View} from "react-native";
+import {Button, Linking, View, StyleSheet} from "react-native";
 import React from "react";
 
 const FormsRedirect = (props) => {
