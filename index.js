@@ -12,8 +12,7 @@ export const applyCustomCode = (externalCodeSetup) => {
         screens: [
           {
             item: {
-              component: () => AmeliaCalendarRedirect(),
-              component: () => FormsRedirect()
+              component: () => AmeliaCalendarRedirect()
             }
           }
         ]
