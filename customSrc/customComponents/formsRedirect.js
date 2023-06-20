@@ -20,20 +20,39 @@ const FormsRedirect = (props) => {
 
   return <View style={{padding: 20, backgroundColor: "black", borderRadius: 5}}>
     <Button
+        style={styles.Button}
         title="Ingresar Historia Clínica Nutricional"
         onPress={openForm1}
     />
 
     <Button
+      style={styles.Button}
         title="Ingresar Medidas de Composición Corporal"
         onPress={openForm2}
     />
 
     <Button
+        style={styles.Button}
         title="Agendar cita"
         onPress={handlePress}
     />
   </View>
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
+  button: {
+    marginVertical: 7,
+    fontWeight: 'bold',
+    backgroundColor: '#f5f5f5',
+    color: 'white',
+  },
+});
+
 
 export default FormsRedirect;
