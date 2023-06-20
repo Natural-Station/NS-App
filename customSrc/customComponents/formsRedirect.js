@@ -1,8 +1,8 @@
-import {TouchableOpacity, Linking, View} from "react-native";
+import {TouchableOpacity, Linking, View, Text} from "react-native";
 import React from "react";
 
-const FormsRedirect = (props) => {
-    
+const formsRedirect = (props) => {
+
   const openForm1 = () => {
     const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSc682QZyetUQ042hBuAx_lIRhhMQEbW6Xz9GZG1Bb-mTIaoUQ/viewform";
     Linking.openURL(formUrl);
@@ -21,24 +21,27 @@ const FormsRedirect = (props) => {
   return <View style={{padding: 20, backgroundColor: "black", borderRadius: 5}}>
     <TouchableOpacity
         onPress={openForm1}
+        style={{marginVertical: 4, borderRadius: 15, borderColor: "#0C0B0C"}}
     >
-      <Text>
-      Ingresar Historia Clínica Nutricional
+      <Text style={{fontSize: 18}}>
+        Ingresar Historia Clínica Nutricional
       </Text>
-      </TouchableOpacity>
-
-    <TouchableOpacity
-        onPress={openForm2}
-    >
-      <Text>Medidas de Composición Corporal</Text>
     </TouchableOpacity>
 
     <TouchableOpacity
+        style={{marginVertical: 4, borderRadius: 15, borderColor: "#0C0B0C"}}
+        onPress={openForm2}
+    >
+      <Text style={{fontSize: 18}}>Medidas de Composición Corporal</Text>
+    </TouchableOpacity>
+
+    <TouchableOpacity
+        style={{marginVertical: 4, borderRadius: 15, borderColor: "#0C0B0C"}}
         onPress={handlePress}
     >
-        <Text>Agendar cita</Text>
-    </TouchableOpacity>  
-    </View>
+      <Text style={{fontSize: 18}}>Agendar cita</Text>
+    </TouchableOpacity>
+  </View>
 }
 
-export default FormsRedirect;
+export default formsRedirect;
