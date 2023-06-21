@@ -1,18 +1,18 @@
 import React from "react";
-import {Text, TouchableOpacity, View} from "react-native";
-import AmeliaCalendarRedirect from "./customSrc/customComponents/ameliaCalendarRedirect";
+import formsRedirect from "./customSrc/customComponents/formsRedirect";
 
 export const applyCustomCode = (externalCodeSetup) => {
+  // externalCodeSetup.cssApi.addCustomColors({"customBackgroundColor": "#0C0B0C"});
 
   externalCodeSetup.moreScreenApi.setTabsList((section, dispatch) => {
     return [
       ...section,
       {
-        label: "NUTRICIÓN",
+        label: "PANEL NUTRICIONAL",
         screens: [
           {
             item: {
-              component: () => AmeliaCalendarRedirect()
+              component: () => formsRedirect()
             }
           }
         ]
